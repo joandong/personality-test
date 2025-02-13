@@ -1,3 +1,14 @@
+type ArchetypeDescription = {
+  title: string
+  traits: string
+  positive: string[]
+  negative: string[]
+}
+
+type ArchetypeDescriptions = {
+  [key: string]: ArchetypeDescription
+}
+
 export const questions = [
   "我会不加判断地就接受外来的信息",
   "生命中太多的变化，会使我迷失方向",
@@ -73,7 +84,7 @@ export const questions = [
   "对我而言，找寻的过程与结果同等重要",
 ]
 
-export const archetypeQuestions = {
+export const archetypeQuestions: { [key: string]: number[] } = {
   破坏者: [2, 4, 21, 52, 61, 66],
   天真者: [5, 13, 34, 49, 63, 65],
   创造者: [8, 19, 31, 60, 64, 69],
@@ -88,7 +99,7 @@ export const archetypeQuestions = {
   爱人者: [12, 16, 17, 25, 29, 45],
 }
 
-export const archetypeDescriptions = {
+export const archetypeDescriptions: ArchetypeDescriptions = {
   破坏者: {
     title: "破坏者 (Destroyer)",
     traits: "变革、释放、重生",
